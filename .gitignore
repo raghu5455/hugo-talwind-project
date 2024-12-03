@@ -47,4 +47,6 @@ Thumbs.db
 *.flv
 *.mov
 *.wmv
-
+public/
+.hugo_build.lock
+resources/
