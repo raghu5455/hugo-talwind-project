@@ -1,10 +1,109 @@
-collections_config:
-  home:
-    _enabled_editors:
-      - content
-    path: content/
+collections:
+  params:
+    label: "Site Parameters"
+    type: "data"
+    fields:
+      - name: "logo"
+        label: "Logo"
+        type: "image"
+      - name: "brandName"
+        label: "Brand Name"
+        type: "text"
+      - name: "nav"
+        label: "Navigation Links"
+        type: "list"
+        schema:
+          fields:
+            - name: "label"
+              label: "Link Label"
+              type: "text"
+              required: true
+            - name: "url"
+              label: "Link URL"
+              type: "text"
+              required: true
+      - name: "buttons"
+        label: "Header Buttons"
+        type: "group"
+        fields:
+          - name: "login"
+            label: "Login Button"
+            type: "group"
+            fields:
+              - name: "label"
+                label: "Button Label"
+                type: "text"
+                required: true
+              - name: "url"
+                label: "Button URL"
+                type: "text"
+                required: true
+          - name: "start_trial"
+            label: "Start Trial Button"
+            type: "group"
+            fields:
+              - name: "label"
+                label: "Button Label"
+                type: "text"
+                required: true
+              - name: "url"
+                label: "Button URL"
+                type: "text"
+                required: true
+      - name: "logoSection"
+        label: "Logo Section"
+        type: "group"
+        fields:
+          - name: "heading"
+            label: "Section Heading"
+            type: "text"
+            required: true
+          - name: "logos"
+            label: "Logos"
+            type: "list"
+            schema:
+              fields:
+                - name: "logo"
+                  label: "Logo Image"
+                  type: "image"
+                  required: true
 
-collection_groups:
-  - collections:
-      - home
-    heading: "Content"
+collections_config:
+  pages:
+    fields:
+      - name: "banner"
+        label: "Banner Section"
+        type: "group"
+        fields:
+          - name: "title"
+            label: "Title"
+            type: "text"
+          - name: "description"
+            label: "Description"
+            type: "textarea"
+          - name: "buttonLabel"
+            label: "Button Label"
+            type: "text"
+          - name: "buttonURL"
+            label: "Button URL"
+            type: "text"
+          - name: "image"
+            label: "Image"
+            type: "image"
+      - name: "logoSection"
+        label: "Logo Section"
+        type: "group"
+        fields:
+          - name: "heading"
+            label: "Section Heading"
+            type: "text"
+            required: true
+          - name: "logos"
+            label: "Logos"
+            type: "list"
+            schema:
+              fields:
+                - name: "logo"
+                  label: "Logo Image"
+                  type: "image"
+                  required: true

@@ -1,0 +1,45 @@
+<header class="bg-white">
+    <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+        <div class="w-[230px]">
+            <a href="/" class="flex items-center">
+                <img src="{{ .Site.Params.logo }}" alt="{{ .Site.Params.brandName }}" class="h-10 w-[113px]">
+            </a>
+        </div>
+
+        <button id="menu-toggle" class="flex text-gray-800 rounded ">
+            <span></span>
+        </button>
+
+        <nav id="menu" class="hidden  space-x-[78px]">
+            {{ range .Site.Params.nav }}
+            <a href="{{ .url }}" class="font-medium text-base leading-tight text-[#0B0C0D] hover:text-[#05747A] m-0">{{ .label }}</a>
+            {{ end }}
+        </nav>
+
+        <div class="header_btns hidden md:flex space-x-[12px] w-[230px]">
+            <a href="{{ .Site.Params.buttons.login.url }}"
+                class="loginBtn bg-[#E6F5F6] text-[#05747A] p-[14.5px_24px] font-semibold text-[16px] leading-[19.36px] rounded-xl">{{
+                .Site.Params.buttons.login.label }}</a>
+            <a href="{{ .Site.Params.buttons.start_trial.url }}"
+                class="trialBtn bg-[#05747A] p-[14.5px_24px] font-semibold text-[16px] leading-[19.36px] text-white rounded-xl">{{
+                .Site.Params.buttons.start_trial.label }}</a>
+        </div>
+    </div>
+
+    <div id="mobile-menu" class="hidden bg-gray-100 md:hidden p-4">
+        <nav class="space-y-4">
+            {{ range .Site.Params.nav }}
+            <a href="{{ .url }}" class="block text-gray-600 hover:text-blue-500">{{ .label }}</a>
+            {{ end }}
+        </nav>
+        <div class="mt-8 space-y-4">
+            <a href="{{ .Site.Params.buttons.login.url }}"
+                class="loginBtn p-[14.5px_24px] font-semibold text-[16px] leading-[19.36px] rounded-xl">{{
+                .Site.Params.buttons.login.label
+                }}</a>
+            <a href="{{ .Site.Params.buttons.start_trial.url }}"
+                class="trialBtn p-[14.5px_24px] font-semibold text-[16px] leading-[19.36px] text-white rounded-xl">{{
+                .Site.Params.buttons.start_trial.label }}</a>
+        </div>
+    </div>
+</header>

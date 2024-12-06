@@ -1,0 +1,23 @@
+<section class="relative bg-white py-[105px] z-10 overflow-hidden">
+    <div class="container mx-auto flex flex-wrap items-center">
+
+      <div class="w-full lg:w-1/2 px-4">
+        <h2 class="text-black font-bold text-[47px] leading-[52.64px] tracking-[0.95px] capitalize mb-6">
+          {{ with .Params.banner.title }}{{ . }}{{ end }}
+        </h2>
+        <p class="text-[#484F59] font-normal text-[20px] leading-[28px] tracking-[-0.4px] mb-8">
+          {{ with .Params.banner.description }}{{ . }}{{ end }}
+        </p>
+        <a href="{{ with .Params.banner.buttonURL }}{{ . }}{{ end }}"
+          class="inline-block bg-[#05747A] p-[14.5px_24px] font-semibold text-[16px] leading-[19.36px] text-white rounded-xl">
+          {{ with .Params.banner.buttonLabel }}{{ . }}{{ end }}
+        </a>
+      </div>
+
+      <div class="w-full lg:w-1/2 px-4">
+        <img src="{{ with .Params.banner.image }}{{ . }}{{ end }}" alt="Banner Image" class="mx-auto">
+      </div>
+    </div>
+        <img src="{{ with .Params.shape.image }}{{ . }}{{ end }}" alt="Shape Image" class="w-[700px] h-full object-cover object-top absolute bottom-0 top[0] right-[-68px] z-[-1]">
+</section>
+  

@@ -1,3 +1,37 @@
 baseURL = 'https://example.org/'
 languageCode = 'en-us'
 title = 'My New Hugo Site'
+
+[params]
+  logo = "img/logo.svg" 
+
+  [[params.nav]]
+    label = "Products"
+    url = "#"
+
+  [[params.nav]]
+    label = "Solutions"
+    url = "#"
+
+  [[params.nav]]
+    label = "Resources"
+    url = "#"
+
+  [[params.nav]]
+    label = "Company"
+    url = "#"
+
+  [[params.nav]]
+    label = "Pricing"
+    url = "#"
+
+  [params.buttons]
+    [params.buttons.login]
+      label = "Login"
+      url = "#"
+  
+    [params.buttons.start_trial]
+      label = "Start Trial"
+      url = "#"
+
+

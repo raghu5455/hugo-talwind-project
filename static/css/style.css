@@ -1,0 +1,57 @@
+body {
+    font-family: "Inter", sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: "DM Sans", sans-serif;
+}
+
+@media (min-width: 1440px) {
+    .container {
+        max-width: 1360px;
+    }
+}
+
+
+#menu-toggle span {
+    width: 27px;
+    height: 3px;
+    border-radius: 5px;
+    background: #000000;
+    box-shadow: 0 9px 0 #000000, 0 -9px 0 #000000;
+    transition: 0.5s;
+    display: inline-block;
+}
+
+@media (min-width: 1024px) {
+    #menu-toggle {
+        display: none;
+    }
+
+    nav#menu {
+        display: flex;
+    }
+}
+
+.menu-show {
+    display: block;
+}
+
+@media (max-width: 1280px) {
+    .space-x-\[78px\] > :not([hidden]) ~ :not([hidden]) {
+        --tw-space-x-reverse: 0;
+        margin-right: calc(78px * var(--tw-space-x-reverse));
+        margin-left: calc(30px * calc(1 - var(--tw-space-x-reverse)));
+    }
+}
+
+@media (max-width: 1024px) {
+    .header_btns {
+        display: none;
+    }
+}
